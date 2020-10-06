@@ -33,6 +33,11 @@ namespace TestPlayer {
                 Mathf.Cos (Mathf.Deg2Rad * transform.eulerAngles.y)
             );
 
+            //TODO:ちゃんと作る
+            if (Input.GetKey (KeyCode.A)) {
+                transform.eulerAngles += Vector3.down * 180;
+            }
+
             //左右
             if (Input.GetKey (KeyCode.LeftArrow)) {
                 transform.eulerAngles += Vector3.down * Player.SHIP_INCLINE_SPEED;
