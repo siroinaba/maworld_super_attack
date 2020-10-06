@@ -11,6 +11,9 @@ namespace TestPlayer {
         [SerializeField]
         public GameObject Ship = null;
 
+        [SerializeField]
+        public GameObject BulletPrefab = null;
+
         private static readonly float SHIP_REGAIN_SPEED = 0.01f;
 
         private static readonly float SHIP_INCLINE_SPEED = 2;
@@ -32,6 +35,12 @@ namespace TestPlayer {
                 (-1) * Mathf.Sin (Mathf.Deg2Rad * transform.eulerAngles.x),
                 Mathf.Cos (Mathf.Deg2Rad * transform.eulerAngles.y)
             );
+
+            //弾丸発射
+            if (Input.GetKeyDown (KeyCode.Space)) {
+                GameObject obj = Instantiate (BulletPrefab, this.transform.position, Quaternion.identity);
+                obj.GetComponent<Bullet> ().Speed = Rigidbody.velocity;
+            }
 
             //TODO:ちゃんと作る
             if (Input.GetKey (KeyCode.A)) {
