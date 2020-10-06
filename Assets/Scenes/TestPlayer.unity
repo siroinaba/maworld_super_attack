@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1023997317}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: StageWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,6 +359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 1404243458}
   Ship: {fileID: 1864611984}
+  BulletPrefab: {fileID: 3626075606016808283, guid: 13db1d59c9671408487c3405d8992a82,
+    type: 3}
 --- !u!54 &1404243458
 Rigidbody:
   m_ObjectHideFlags: 0
